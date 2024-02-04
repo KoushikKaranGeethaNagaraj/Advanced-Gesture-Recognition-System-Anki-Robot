@@ -40,8 +40,10 @@ In this project, we investigated the impact of face-to-robot interaction with th
 # Additional<be>
 For more information on the project please refer to  AnkiRobotGestureRecognitionFinalReport.pdf and  AnkiRobotGestureRecognitionPresentation.pdf. Please mail koushikkaran6@gmail.com if any queries. <be>
 <be>
-![WhatsApp Image 2024-02-04 at 14 22 36 (1)](https://github.com/KoushikKaranGeethaNagaraj/Advanced-Gesture-Recognition-System-Anki-Robot/assets/116392599/56bda0e8-c8ce-4c5d-a4c6-33ca03425bae)
-
+<p align="center">
+  <img src="https://github.com/KoushikKaranGeethaNagaraj/Advanced-Gesture-Recognition-System-Anki-Robot/assets/116392599/38b86bd3-894b-40c6-946e-bfa11883e12b" alt="image" width="400"/>
+  <img src="https://github.com/KoushikKaranGeethaNagaraj/Advanced-Gesture-Recognition-System-Anki-Robot/assets/116392599/56bda0e8-c8ce-4c5d-a4c6-33ca03425bae" alt="WhatsApp Image 2024-02-04 at 14 22 36 (1)" width="400"/>
+</p>
 
 
 
