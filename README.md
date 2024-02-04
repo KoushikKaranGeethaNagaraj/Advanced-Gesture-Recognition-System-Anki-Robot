@@ -37,13 +37,13 @@ Note: Given the Anki Vector robot's limited computational capacity, all preproce
 # Conclusion<be>
 In this project, we investigated the impact of face-to-robot interaction with the Anki Vector robot on mental health and wellness, focusing on the emotional, psychological, and social facets of well-being. This interaction involves users expressing emotions through facial gestures (such as happiness or sadness) towards the robot. Our preliminary findings indicate that while there's no definitive evidence that interactions with the Anki Vector robot significantly improve users' mood or feelings of relaxation, one metric suggests a modest benefit. Recognizing the importance of mental health, which influences thoughts, feelings, and behaviors, as well as stress management and decision-making, we aim to complement existing mental health treatments—such as therapy, medication, and lifestyle adjustments—with the Anki Vector robot. Future work includes conducting studies with individuals facing mental health challenges and expanding our evaluation methods to draw more concrete conclusions.<be>
 
+# Additional<be>
+For more information on the project please refer to  AnkiRobotGestureRecognitionFinalReport.pdf and  AnkiRobotGestureRecognitionPresentation.pdf. Please mail koushikkaran6@gmail.com if any queries. <be>
+<be>
 <p align="center">
   <img src="https://github.com/KoushikKaranGeethaNagaraj/Advanced-Gesture-Recognition-System-Anki-Robot/assets/116392599/75a1d163-5664-4b44-b890-7914e2565e16)" alt="Image 1" width="400" height="250"/>
   <img src="https://github.com/KoushikKaranGeethaNagaraj/Advanced-Gesture-Recognition-System-Anki-Robot/assets/116392599/22f9ada9-c7bc-4465-aa0c-14341d536bca)" alt="Image 2" width="400" height="250/>
 </p>
-
-# Additional<be>
-For more information on the project please refer to  AnkiRobotGestureRecognitionFinalReport.pdf and  AnkiRobotGestureRecognitionPresentation.pdf. Please mail koushikkaran6@gmail.com if any queries. <br>
 
 
 
