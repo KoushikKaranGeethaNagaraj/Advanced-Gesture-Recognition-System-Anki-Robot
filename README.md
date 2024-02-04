@@ -24,7 +24,11 @@ To give an overview of the project:<br>
 
 ● Upon establishing a connection with a PC, the Anki Vector robot becomes programmable, allowing for access, control, and customization of its code, albeit the process requires a nuanced approach. This project focuses on leveraging the Anki Vector robot's camera to identify and capture facial expressions. The subsequent steps involve cropping the captured facial data for further processing. The refined image is then analyzed using a model trained on the Real-world Affective Faces Database (RAF-DB), a robust dataset designed for emotion recognition. This enables the Anki Vector robot to interpret human emotions with a high degree of accuracy. In addition to utilizing its built-in gesture detection capabilities, the modified code offers the flexibility to switch to the external model for enhanced emotion recognition. This dual-mode functionality not only broadens the robot's interactive capabilities but also enriches the user experience by responding to emotional cues more effectively.<be>
 
-Note: Given the Anki Vector robot's limited computational capacity, all preprocessing tasks are executed on the connected PC. Subsequently, the robot receives commands from the PC to execute specific actions based on the processed data, ensuring efficient operation and interaction without overburdening the robot's onboard processor.<be>
+Note: Given the Anki Vector robot's limited computational capacity, all preprocessing tasks are executed on the connected PC. Subsequently, the robot receives commands from the PC to execute specific actions based on the processed data, ensuring efficient operation and interaction without overburdening the robot's onboard processor.<br>
+
+● The project includes a directory named "DevelopmentFiles," which houses essential functionalities. These are seamlessly integrated into the main file, facilitating the comprehensive execution of the project's features.<be>
+
+
 
 
 
