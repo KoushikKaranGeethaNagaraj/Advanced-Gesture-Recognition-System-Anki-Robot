@@ -28,7 +28,19 @@ Note: Given the Anki Vector robot's limited computational capacity, all preproce
 
 ● The project includes a directory named "DevelopmentFiles," which houses essential functionalities. These are seamlessly integrated into the main file, facilitating the comprehensive execution of the project's features.<be>
 
+● The project includes a directory named "GestureDatasetAnkiRobot," which contains sample images of the cropped images of the faces with the gestures that will be passed into the model for prediction.<be>
 
+● The project includes a directory named "GestureDetectionModel," which holds the model that predicts the specific gesture from the image. More information on the model is in the report.<be>
+
+● The primary script, "GestureDetectionAndAction.py" orchestrates the core functionality of the Anki Vector robot. It enables the robot to recognize and capture facial expressions or gestures, process these inputs to crop the facial data accurately, and then analyze the cropped image using a trained model. The model identifies emotional states such as happiness, sadness, neutrality, anger, or disgust. Based on the identified emotion, the robot executes tailored actions designed to positively influence the user's mood. This sophisticated interaction mechanism allows for a nuanced response to a wide range of emotional cues, enhancing the user experience through personalized engagement.<be>
+
+# Conclusion<be>
+
+In this project, we investigated the impact of face-to-robot interaction with the Anki Vector robot on mental health and wellness, focusing on the emotional, psychological, and social facets of well-being. This interaction involves users expressing emotions through facial gestures (such as happiness or sadness) towards the robot. Our preliminary findings indicate that while there's no definitive evidence that interactions with the Anki Vector robot significantly improve users' mood or feelings of relaxation, one metric suggests a modest benefit. Recognizing the importance of mental health, which influences thoughts, feelings, and behaviors, as well as stress management and decision-making, we aim to complement existing mental health treatments—such as therapy, medication, and lifestyle adjustments—with the Anki Vector robot. Future work includes conducting studies with individuals facing mental health challenges and expanding our evaluation methods to draw more concrete conclusions.<be>
+
+
+# Additional<be>
+For more information on the project please refer to  AnkiRobotGestureRecognitionFinalReport.pdf and  AnkiRobotGestureRecognitionPresentation.pdf. Please mail koushikkaran6@gmail.com if any queries. <br>
 
 
 
