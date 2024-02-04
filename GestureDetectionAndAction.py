@@ -1,3 +1,5 @@
+# This script has main functionalities such as getting the robot to capture the face, cropping the image, gesture prediction, and finally giving the command to act.
+# Please note you have to change the paths as per your system
 import threading
 import time
 import anki_vector
@@ -34,7 +36,7 @@ class Image:
 
     def on_new_camera_image(self,robot, event_type, event1_raw, done):
         #___________get image without face annotations______________#
-        #image__preprocessing__from___camera________________________#
+        #___________image preprocessing from camera__________________#
         main_image=event1_raw.image
         open_cv_primary_image=np.array(main_image)
         open_cv_primary_image=open_cv_primary_image[:,:,::-1].copy()
@@ -69,7 +71,6 @@ class Image:
             area=max(area_list)         
             print(area)
             if area > 5000 and area < 70000:
-
                 if (y_old - y) > 200:
                     i += 1
                     y_old = y
@@ -91,42 +92,35 @@ class Image:
                     self.im_flag=True
         print(self.im_flag,self.action_flag)
         if self.im_flag==True and self.action_flag==False:
-            print("Insideeeeeeeeeeeeeeeeeee_classify")
+            print("TIme to Classify")
             self.im_flag==False
-            # cv2.imshow("hi",self.model_image)
-            # cv2.waitKey(0)
-            # __________________model_______Implementation______________________#
+            # __________________model Implementation______________________#
             # if self.model_image!=0:
             emotion_dict = {0: "Angry", 1: "Disgusted", 2: "Fearful", 3: "Happy", 4: "Neutral", 5: "Sad",
                             6: "Surprised"}
             # load json and create model
             # json_file = r"C:\Anki_vector\anki_dataset\Face_gesture\model\emotion_model.json"
-
             json_file = open('C:\Anki_vector\Face_gesture\scripts\model\emotion_model.json', 'r')
-
             # json_file = open(":/Anki_vector/anki_dataset/Face_gesture/model/emotion_model.json", 'r')
             loaded_model_json = json_file.read()
-
             json_file.close()
-            # print("'''''''''''''''''''jsonnnnnnnnnnnnnnnnnnnnnnnn")
             emotion_model = model_from_json(loaded_model_json)
             # load weights into new model
-
             emotion_model.load_weights("C:\Anki_vector\Face_gesture\scripts\model\emotion_model.h5")
-            # print("modellllllllllllllllllllllllllll----------------------------------------------")
-            # print("Loaded model from disk")
+            print("Loaded model from disk")
             emotion_prediction = emotion_model.predict(self.model_image)
             maxindex = int(np.argmax(emotion_prediction))
             self.emotion_list.append(maxindex)
             if len(self.emotion_list)>=10:
                 mode_index=np.bincount(self.emotion_list).argmax()
                 self.emotion_list=[]
-                print(emotion_dict[mode_index], "----------------------emotion_pred-------------------------------")
+                print(emotion_dict[mode_index], "----------------------Predicting Gesture/Emotion-------------------------------")
                 self.final_emotion_pred_value=mode_index
                 self.action_flag=True
+                
             ### Happy
             if self.action_flag==True and  self.final_emotion_pred_value==3 :
-                print("entering_squareeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
+                print("square action")
                 for _ in range(4):
                     robot.behavior.drive_off_charger()
                     print("Drive Vector straight...")
@@ -170,6 +164,7 @@ class Image:
                 os.listdir(directory)
                 self.inc += 1
                 self.action_flag = False
+                
             ### neutral
             if self.action_flag == True and self.final_emotion_pred_value == 4:
                 for k in range(5):
@@ -184,7 +179,7 @@ class Image:
                 self.inc += 1
                 self.action_flag = False
 
-
+            ### Other emotions
             else:
                 if self.action_flag == True:
                     print("Set Vector's eye color to purple...")
@@ -202,22 +197,16 @@ class Image:
                     os.listdir(directory)
                     self.inc += 1
                     self.action_flag = False
-
-                
-
-
-        #_______________________dataset saving____________________#
-        # if self.inc>5 and self.inc<45:
-        #     directory=r"C:\Anki_vector\anki_dataset\koushik\suprised"
-        #     cv2.imwrite(os.path.join(directory,str(self.inc)+'cropped_img.jpg'),out)
-        #
-        #     os.listdir(directory)
-        # else:
-        #     print("-----------------------------end--------------------------------------")
-        # self.inc+=1
-        # self.cropped_image=out
-            # cv2.imshow("Hi",)
-            # cv2.waitKey(0)
+        # _______________________Saving the images in a datset ____________________
+        if self.inc>5 and self.inc<45:
+            directory=r"C:\Anki_vector\anki_dataset\koushik\suprised"
+            cv2.imwrite(os.path.join(directory,str(self.inc)+'cropped_img.jpg'),out)
+        
+            os.listdir(directory)
+        else:
+            print("-----------------------------end--------------------------------------")
+        self.inc+=1
+        self.cropped_image=out
         done.set()
 
 with anki_vector.Robot(enable_face_detection=True, enable_custom_object_detection=True) as robot:
