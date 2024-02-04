@@ -1,3 +1,5 @@
+### This script involves the anki vector looking at the face-detecting gestures and then saving the cropped images.
+
 import threading
 import time
 import anki_vector
