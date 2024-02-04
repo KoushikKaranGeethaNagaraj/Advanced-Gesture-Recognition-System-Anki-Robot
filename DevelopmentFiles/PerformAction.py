@@ -1,3 +1,5 @@
+#This is a test file to perform an action on the robot
+
 import threading
 import time
 import anki_vector
@@ -20,7 +22,7 @@ def main():
         # https://github.com/anki/vector-python-sdk/blob/master/examples/sounds/vector_bell_whistle.wav
         #
         # Paste these two wav files next to this tutorial to play sounds.
-        robot.audio.stream_wav_file("dead.wav", 95)
+        robot.audio.stream_wav_file("example.wav", 95)
 
 
 
